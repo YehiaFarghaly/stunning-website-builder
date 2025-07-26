@@ -10,22 +10,6 @@ A full-stack application that generates stunning websites using AI. Built with N
 - **TypeScript**: Full TypeScript support across frontend and backend
 - **RESTful API**: Clean API architecture with NestJS
 
-## 📁 Project Structure
-stunning/
-├── stunning-backend/     # NestJS backend API
-│   ├── src/
-│   │   ├── constants/    # Application constants
-│   │   ├── dto/          # Data transfer objects
-│   │   ├── schemas/      # Database schemas
-│   │   ├── sections/     # Sections module
-│   │   └── services/     # Business logic services
-│   └── ...
-└── stunning-form/        # Next.js frontend
-├── app/              # Next.js app directory
-├── components/       # React components
-├── lib/              # Utility libraries
-├── types/            # TypeScript type definitions
-└── utils/            # Helper functions
 
 
 ## 🛠️ Tech Stack
@@ -78,6 +62,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
 # Server Configuration
 PORT=3001
+MONGODB_URI=mongodb://0.0.0.0:27017/stunning-db
 FRONTEND_URL=http://localhost:3000
 ```
 
@@ -185,33 +170,8 @@ Returns the last generated sections.
 - Edit `stunning-backend/src/constants/llm.constants.ts` to modify AI prompts
 - Adjust `temperature` and `max_tokens` in LLM service for different content styles
 
-## 🔍 Troubleshooting
-
-### Common Issues
-
-1. **"Module not found" errors**: Run `npm install` in both directories
-2. **CORS errors**: Ensure `FRONTEND_URL` in backend `.env` matches your frontend URL
-3. **AI generation fails**: Verify your `GROQ_API_KEY` is valid and has sufficient credits
-4. **Port conflicts**: Change `PORT` in backend `.env` if 3001 is occupied
-
-### Development Tips
-
-- Use `npm run start:dev` for backend hot-reload during development
-- Check browser console and terminal for error messages
-- Ensure both servers are running before testing the application
 
 ## 📄 License
 
 This project is licensed under the MIT License.
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📞 Support
-
-If you encounter any issues or have questions, please open an issue on GitHub.
