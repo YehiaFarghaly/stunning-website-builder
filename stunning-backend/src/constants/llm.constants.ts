@@ -5,6 +5,12 @@ export const LLM_CONSTANTS = {
   SECTIONS_COUNT: 3,
   FALLBACK_PHONE: '(555) 123-4567',
   FALLBACK_ADDRESS: '456 Business Ave, Suite 100',
+  CACHE_TTL: 30 * 60 * 1000, // 30 minutes
+  CACHE_FALLBACK_TTL: 5 * 60 * 1000, // 5 minutes for fallback responses
+  CACHE_CLEANUP_INTERVAL: 10 * 60 * 1000, // 10 minutes
+  RATE_LIMIT_WINDOW: 60 * 1000, // 1 minute
+  RATE_LIMIT_MAX_REQUESTS: 10, // 10 requests per minute
+  RATE_LIMIT_CLEANUP_INTERVAL: 60 * 1000, // 1 minute
 };
 
 export const PROMPT_TEMPLATE = `
